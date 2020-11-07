@@ -45,5 +45,5 @@ pangkat=pow(N,M);
         cout <<" = "<<pangkat <<endl;
         cout <<"\n";
 }
-cout <<"Terima kasih (*^-^*)";
+cout <<"Terima kasih (*^-^*).";
 }
