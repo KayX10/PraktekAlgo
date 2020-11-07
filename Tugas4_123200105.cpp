@@ -37,7 +37,7 @@ case 2:
     cout <<"Input angka N : "; cin >> N;
     cout <<"Input angka M : "; cin >> M;
     cout << "Hasil " <<N; cout <<" ^ " <<M <<endl;
-pangkat=N*M;
+pangkat=pow(N,M);
     cout <<N;
     for (x=1; x<M; x++)
 
