@@ -74,6 +74,5 @@ default : cout <<"Input salah :)" <<endl;
     }
 int main(){
     program();
-
     return 0;
 }
