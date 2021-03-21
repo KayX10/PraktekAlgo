@@ -1,0 +1,48 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    struct data_mahasiswa
+    {
+        int NoMhs;
+        float NilaiAngka;
+        string Nama,Kelas,NilaiHuruf;
+    };
+
+    data_mahasiswa mhs[5];
+
+    for (int i=1; i<=5; i++){
+    cout <<"Nomor Mahasiswa: "; cin>>mhs[i].NoMhs;
+    cout <<"Nama mahasiswa: ";cin.ignore(); getline(cin,mhs[i].Nama);
+    cout <<"Kelas : "; cin>>mhs[i].Kelas;
+    cout <<"Nilai (Angka): "; cin>>mhs[i].NilaiAngka;
+
+    if (mhs[i].NilaiAngka>=0 && mhs[i].NilaiAngka<20){
+        mhs[i].NilaiHuruf="E";
+        cout <<"Nilai (Huruf): "<<mhs[i].NilaiHuruf;
+        cout <<endl<<endl;
+    }
+    else if (mhs[i].NilaiAngka>=20 && mhs[i].NilaiAngka<40){
+        mhs[i].NilaiHuruf="D";
+        cout <<"Nilai (Huruf): "<<mhs[i].NilaiHuruf;
+        cout <<endl<<endl;
+    }
+    else if (mhs[i].NilaiAngka>=40 && mhs[i].NilaiAngka<60){
+        mhs[i].NilaiHuruf="C";
+        cout <<"Nilai (Huruf): "<<mhs[i].NilaiHuruf;
+        cout <<endl<<endl;
+    }
+    else if (mhs[i].NilaiAngka>=60 && mhs[i].NilaiAngka<75){
+        mhs[i].NilaiHuruf="B";
+        cout <<"Nilai (Huruf): "<<mhs[i].NilaiHuruf;
+        cout <<endl<<endl;
+    }
+    else if (mhs[i].NilaiAngka>=75 && mhs[i].NilaiAngka<=100){
+        mhs[i].NilaiHuruf="A";
+        cout <<"Nilai (Huruf): "<<mhs[i].NilaiHuruf;
+        cout <<endl<<endl;
+    }
+    }
+}
