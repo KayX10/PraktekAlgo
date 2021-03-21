@@ -1,0 +1,32 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    struct data{
+    int BKomp,No,Skor;
+    string nama;
+    };
+
+    struct mahasiswa{
+    string NamaMhs,MK;
+    int bMhs,nMhs;
+    struct data Komp;
+    };
+
+    struct mahasiswa dataMhs[2];
+
+    cout <<"Banyak mahasiswa : "; cin>>dataMhs[0].bMhs; cout<<endl;
+    for(int i=0; i<=dataMhs[0].bMhs-1; i++){
+    cout <<"Nomor Mahasiswa : "; cin>>dataMhs[i].nMhs;
+    cout <<"Nama : "; cin.ignore(); getline(cin,dataMhs[i].NamaMhs);
+    cout <<"Matkul : "; cin>>dataMhs[i].MK;
+    cout <<"Banyak Komponen : "; cin>>dataMhs[i].Komp.BKomp; cout<<endl;
+        for (int j=1; j<=dataMhs[i].Komp.BKomp; j++){
+            cout <<"\tNomor : "; cin>>dataMhs[i].Komp.No;
+            cout <<"\tNama : "; cin>>dataMhs[i].Komp.nama;
+            cout <<"\tSkor : "; cin>>dataMhs[i].Komp.Skor; cout<<endl;
+        }
+    }
+}
