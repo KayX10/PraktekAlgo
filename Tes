@@ -1,0 +1,128 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+
+int main(int argc, char *argv[])
+{
+
+    int sA=12, sB=9, sC=11, sD=4;
+
+    int pilihan,a=0,jumlahbarang,harga;
+    char username[10], password[10], namapembeli[10], notelp[12], merk[5], warna[15],noSeri[5];
+    bool login=false;
+
+    do{
+    printf("Merk yang tersedia\n");
+    printf(">ASSUS  - %d",sA );
+        printf("\n");
+    printf(">HPX    - %d",sB );
+        printf("\n");
+    printf(">MSY    - %d",sC );
+        printf("\n");
+    printf(">APEL   - %d",sD );
+    printf("\n\n");
+    printf("Menu\n");
+    printf("[1].Login\n");
+    printf("[2].Input data\n");
+    printf("[3].Tampil Pembelian\n");
+    printf("[4].Bayar\n");
+    printf("[5].Keluar\n");
+    printf("Pilih menu : ");
+        scanf("%d", &pilihan);
+
+    switch (pilihan){
+
+case 1:
+    if (a==0){
+    printf("\tUsername: ");
+        scanf("%s", &username);
+    printf("\tPassword: ");
+        scanf("%s", &password);
+
+    if (strcmp(username,"Kevin") ==0 && strcmp(password,"1007") ==0){
+        printf("Login Berhasil\n\n");
+        a++;
+        system ("pause");
+        system ("cls");
+    }
+    else {
+        printf("Username/Password salah\n\n");
+        system ("cls");
+    }
+    }
+    else {
+    printf("Anda sudah login\n");
+    system("pause");
+    system("cls");
+    }
+    break;
+
+case 2 :
+    if(a!=1){
+    printf("Anda belum login!\n");
+    system("pause");
+    system("cls");
+    break;
+    }
+    printf("Nama Pembeli : ");
+        scanf("%s",&namapembeli);
+    printf("No. Telp : ");
+        scanf("%s",&notelp);
+        if(strlen(notelp) <12){
+            printf("Nomor telepon kurang dari 12 digit");
+            system("pause");
+            system("cls");
+            }
+        else {
+    printf("Masukkan merk : ");
+        scanf("%s",&merk);
+    if (strcmp(merk,"ASSUS")==0){
+        noSeri=="015";
+        harga==5000000;
+        warna=="Merah";
+        printf("Jumlah barang : ");
+        scanf("%d",&jumlahbarang);
+        sA=sA-jumlahbarang;
+
+    }
+    else if (strcmp(merk,"HPX")==0){
+        noSeri=="1X2";
+        harga==2500000;
+        warna=="Biru tua";
+        printf("Jumlah barang : ");
+        scanf("%d",&jumlahbarang);
+        sB=sB-jumlahbarang;
+    }
+    else if (strcmp(merk,"MSY")==0){
+        noSeri=="ASA";
+        harga==8250000;
+        warna=="Kuning pucat";
+        printf("Jumlah barang : ");
+        scanf("%d",&jumlahbarang);
+        sC=sC-jumlahbarang;
+    }
+    else if (strcmp(merk,"APEL")==0){
+        noSeri=="APL";
+        harga==15000000;
+        warna=="Silver";
+        printf("Jumlah barang : ");
+        scanf("%d",&jumlahbarang);
+        sD=sD-jumlahbarang;
+    }
+    printf("Berhasil Input Barang\n");
+
+    system("pause");
+    system("cls");
+    break;
+    }
+case 3:
+    printf("Nama pembeli : %s\n",namapembeli);
+    printf("Nomor telepon : %s\n",notelp);
+    printf("Merk laptop : %s\n",merk);
+    printf("\tNomor seri : %s\n,",noSeri);
+    printf("\tHarga laptop : %d\n",harga);
+    printf("\tWarna laptop : %s\n",warna);
+    }
+    }while(!login);
+    return 0;
+}
